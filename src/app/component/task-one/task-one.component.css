@@ -8,16 +8,22 @@ a {
 
 #link {
     font-size: 16px;
+    margin-left: 25px;
 }
+
+.navbar-collapse {
+    margin-left: 150px;
+    position:static;
+}
+
+/* .navbar-brand {
+    margin-right: 10%;
+} */
 
 .nav-container {
     background-color: #fff;
     padding-left: 200px;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.12);
-}
-
-.nav-link {
-    letter-spacing: 0.4px;
 }
 
 #contact-us {
@@ -122,6 +128,49 @@ h1 {
         width: 50%;
         height: auto;
         padding: 0 3% 3% 3%;
+    }
+}
+
+@media only screen and (max-width: 1235px) {
+    #link {
+        margin-left: 20px;
+    }
+    
+    .navbar-collapse {
+        margin-left: 100px;
+        position:static;
+    }
+
+    .navbar-brand {
+        margin-left: -50px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    #link {
+        margin-left: 10px;
+    }
+    
+    .navbar-collapse {
+        margin-left: 50px;
+    }
+
+    .navbar-brand {
+        margin-left: -100px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    #link {
+        margin-left: 5px;
+    }
+    
+    .navbar-collapse {
+        margin-left: 15px;
+    }
+
+    .navbar-brand {
+        margin-left: -135px;
     }
 }
 

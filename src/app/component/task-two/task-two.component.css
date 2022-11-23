@@ -18,3 +18,21 @@
 button {
     margin-left: 10px;
 }
+
+@media only screen and (max-width: 800px) { 
+    button {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+
+    .urlForm {
+        border:black; 
+        border-width:2px; 
+        border-style:solid;
+        height: 400px;
+        width: 300px;
+        margin-left: 20%;
+        margin-top: 5%;
+        margin-right: 20%;
+    }
+}

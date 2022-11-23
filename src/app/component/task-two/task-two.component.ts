@@ -18,23 +18,21 @@ export class TaskTwoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  shortUrl(url: string) {
+  shortUrl(url: string): void {
     this.service.getShortUrl(url)
       .pipe(
         catchError(() => {
-          return throwError(() => new Error('Enter something wrong !'))
+          return throwError(() => new Error('You Enter something wrong !'))
         })
       )
       .subscribe({
         next: (res) => {
-          console.log(res);
           if (res) {
             this.shortcutUrlFirst = res.result.short_link;
             this.shortcutUrlSecond = res.result.short_link2;
           }
         },
         error: (err) => {
-          console.log(err);
           alert("Enter a valid url i.e, xyz.com")
         },
       })

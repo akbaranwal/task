@@ -1,10 +1,9 @@
 <mat-card class="urlForm">
-      <div class="url">
-        <input class="input-url" #url />
-        <button mat-raised-button color="primary" (click)="shortUrl(url.value)">Shorten</button>
-      </div>
-  
-      <p class="input-url"> Short url: <a routerLink="#" > {{ shortcutUrlFirst }}  </a> </p>
-      <p class="input-url"> Short url: <a routerLink="#" > {{ shortcutUrlSecond }}  </a> </p>
-  
-  </mat-card>
+  <div class="url">
+    <input class="input-url" #url />
+    <button mat-raised-button color="primary" (click)="shortUrl(url.value)">Shorten</button>
+  </div>
+
+  <p class="input-url"> Short url: <a routerLink="#"> {{ shortcutUrlFirst }} </a> </p>
+  <p class="input-url"> Short url: <a routerLink="#"> {{ shortcutUrlSecond }} </a> </p>
+</mat-card>

@@ -6,10 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AppService {
-  private makeShortUrl = "https://api.shrtco.de/v2/shorten";
   constructor(private http: HttpClient) { }
 
-  getShortUrl(url: any): Observable<any> {
+  getShortUrl(url: string): Observable<any> {
     return this.http.get(`https://api.shrtco.de/v2/shorten?url=${url}`);
   }
 
