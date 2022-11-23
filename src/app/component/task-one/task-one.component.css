@@ -187,7 +187,24 @@ h1 {
 
 @media only screen and (max-width: 1000px) { 
     .card {
-        height: 260px;
+        height: 255px;
+    }
+
+    .card-left {
+        width: 100%;
+        position: relative;
+    }
+
+    .card-right {
+        width: 100%;
+        position: relative;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 395px) { 
+    .card {
+        height: 280px;
     }
 
     .card-left {
