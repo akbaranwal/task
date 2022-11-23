@@ -187,7 +187,7 @@ h1 {
 
 @media only screen and (max-width: 1000px) { 
     .card {
-        height: 240px;
+        height: 260px;
     }
 
     .card-left {
