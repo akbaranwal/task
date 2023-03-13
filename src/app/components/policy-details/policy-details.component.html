@@ -1,0 +1,129 @@
+<div class="parent-container">
+    <div class="container">
+        <mat-card>
+            <mat-card-content>
+                <form (ngSubmit)="onSubmit()" name="policyForm" [formGroup]="policyForm">
+    
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter PPT</mat-label>
+                            <input matInput placeholder="0" formControlName="ppt" required>
+                            <mat-error *ngIf="!policyForm.controls['ppt'].valid">
+                                ppt is invalid
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+    
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter PT</mat-label>
+                            <input matInput placeholder="0" formControlName="pt" required>
+                            <mat-error *ngIf="!policyForm.controls['pt'].valid">
+                                ppt is invalid
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+    
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter Premium</mat-label>
+                            <input matInput placeholder="0" formControlName="premium" required>
+                            <mat-error *ngIf="!policyForm.controls['premium'].valid">
+                                premium is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Select</mat-label>
+                            <mat-select formControlName="date" required>
+                                <mat-option value="one"> Yearly </mat-option>
+                                <mat-option value="two"> Half-Yearly</mat-option>
+                                <mat-option value="three"> Monthly </mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="!policyForm.controls['date'].valid">
+                                date is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Gender</mat-label>
+                            <mat-select formControlName="gender" required>
+                                <mat-option value="male"> Male </mat-option>
+                                <mat-option value="female"> Female</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="!policyForm.controls['gender'].valid">
+                                gender is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Sum Assured</mat-label>
+                            <input matInput placeholder="0" formControlName="sum" required>
+                            <mat-error *ngIf="!policyForm.controls['sum'].valid">
+                                Sum Assured is required
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Enter Age</mat-label>
+                            <input matInput placeholder="0" formControlName="age" required>
+                            <mat-error *ngIf="!policyForm.controls['age'].valid">
+                                age is invalid
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary" type="submit" [disabled]="policyForm.invalid"> Submit
+                        </button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    
+    <div *ngIf="flag" class="container">
+        <table>
+            <tr>
+                <th class="table-header" colspan="2">POLICY DETAILS</th>
+            </tr>
+            <tr>
+                <th>Inputs</th>
+                <th>Particulars</th>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>{{ age }}</td>
+            </tr>
+            <tr>
+                <td>Sum Assured</td>
+                <td>{{ sum }}</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>{{ gender }}</td>
+            </tr>
+            <tr>
+                <td>Model Premium</td>
+                <td>{{ premium }}</td>
+            </tr>
+            <tr>
+                <td> Premium Frequency </td>
+                <td>{{ date }}</td>
+            </tr>
+            <tr>
+                <td> PT </td>
+                <td>{{ pt }}</td>
+            </tr>
+            <tr>
+                <td> PPT </td>
+                <td>{{ ppt }}</td>
+            </tr>
+    
+        </table>
+    
+    </div>
+</div>

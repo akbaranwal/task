@@ -1,0 +1,37 @@
+.container {
+    min-width: 400px;
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+}
+
+mat-card {
+    min-height: 400px;
+    max-width: 600px;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.table-header {
+    text-align: center;
+    color: #dddddd;
+    background-color: rgb(144, 144, 233);
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
